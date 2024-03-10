@@ -9,7 +9,7 @@ function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await fetch('http://localhost:7000/register', {
+        const res = await fetch(`${REACT_APP_BACKEND_URL}/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': "application/json",

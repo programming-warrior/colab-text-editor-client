@@ -18,7 +18,7 @@ function Home() {
     (async function () {
       const token = localStorage.getItem('token');
       if (token) {
-        const res = await fetch('http://localhost:7000/auth', {
+        const res = await fetch(`${REACT_APP_BACKEND_URL}/auth`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -33,12 +33,12 @@ function Home() {
   useEffect(() => {
     (async function () {
       if (token) {
-        const res = await fetch('http://localhost:7000/docs', {
+        const res = await fetch(`${REACT_APP_BACKEND_URL}/docs`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
         })
-        const res2 = await fetch('http://localhost:7000/sharedDocs', {
+        const res2 = await fetch(`${REACT_APP_BACKEND_URL}/sharedDocs`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -91,7 +91,7 @@ function Home() {
   }, [selectedDoc])
 
   const handleCreateDocument = async () => {
-    const res = await fetch('http://localhost:7000/docs', {
+    const res = await fetch(`${REACT_APP_BACKEND_URL}/docs`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

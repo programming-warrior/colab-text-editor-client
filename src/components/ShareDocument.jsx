@@ -12,7 +12,7 @@ const ShareDocument = ({ doc }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const token = localStorage.getItem('token');
-        const res = await fetch('http://localhost:7000/share', {
+        const res = await fetch(`${REACT_APP_BACKEND_URL}/share`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

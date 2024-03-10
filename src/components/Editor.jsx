@@ -40,7 +40,7 @@ const Editor = ({ col }) => {
 
     useEffect(() => {
         if (doc) {
-            const socket = new WebSocket("ws://localhost:7000", ['Authorization', `${doc.id}`]);
+            const socket = new WebSocket(`${process.env.REACT_APP_BACKEND_WS}`, ['Authorization', `${doc.id}`]);
             socket.addEventListener('open', () => {
                 setWs(socket);
                 console.log('connected');
