@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+    height: 100dvh;
+    height: 100vh;
+    background-color: rgb(243 244 246);
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.black {
+    color: black;
+}
+
+.yellow {
+    color: yellow;
+}
